@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+    #bj ul>li.active{
+			background-color:white;
+			color:blue;
+         
+		}
+        #bj{
+            width: 240px;
+            height: 390px;
+            background-color: #eae9e9;
+            margin: 50px auto;
+        }
+        ul{
+            margin-left: -33px;
+           margin-top: 5px;
+           display: inline-block
+        }
+        li{
+            width: 60px;
+            height: 55px;
+            border: 1px solid white;
+            float: left;
+            list-style: none;
+           margin-left: 10px;
+           margin-top: 8px;
+        }
+        #div2{
+            width: 200px;
+            height: 80px;
+            border: 1px solid white;
+           
+            margin-left: 20px;
+           margin-top: -13px;
+        }
+        #bj ul{
+            color: white;
+        }
+        #bj ul li{
+            background-color: #424242;
+        }
+        ul li span{
+            font-weight: bold;
+            font-size: 18px;
+            display: inline-block;
+            margin-top: 3px;
+            margin-left: 21px;
+        }
+        ul li p{
+            margin-top: -2px;
+            margin-left: 15px;
+        }
+        .div2-wz1{
+            font-size: 13px;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 5px;
+            margin-top: 10px;
+        }
+        .div2-wz2{
+           
+            font-size: 12px;
+            display: inline-block;
+            margin-left: 4px;
+        }
+        #div2 p{
+            display: none;
+        }
+        #ospan{
+            display: block;
+            width: 135px;
+            height: 50px;
+            /* border: 1px solid; */
+            font-size: 12px;
+            margin:0 auto;
+        }
+        #op{
+            display:block;
+            width: 135px;
+            height: 50px;
+            /* border: 1px solid red; */
+          margin-top: 20px;
+            color: grey;
+            margin:0 auto;
+            
+        }
+       </style>
+</head>
+<body>
+        <div id="bj"> 
+                <ul>
+                    <li>
+                        <span>1</span>
+                        <p>JAN</p>
+                    </li>
+                    <li>
+                        <span>2</span>
+                        <p>FER</p>
+                    </li>
+                    <li>
+                        <span>3</span>
+                        <p>MAR</p>
+                    </li>
+                    <li>
+                        <span>4</span>
+                        <p>APR</p>
+                    </li>
+                    <li>
+                        <span>5</span>
+                        <p>MAY</p>
+                    </li>
+                    <li>
+                        <span>6</span>
+                        <p>JUN</p>
+                    </li>
+                    <li>
+                        <span>7</span>
+                        <p>JUL</p>
+                    </li>
+                    <li>
+                        <span>8</span>
+                        <p>AUG</p>
+                    </li>
+                    <li>
+                        <span>9</span>
+                        <p>SEP</p>
+                    </li>
+                    <li>
+                        <span>10</span>
+                        <p>OCT</p>
+                    </li>
+                    <li>
+                        <span>11</span>
+                        <p>NOV</p>
+                    </li>
+                    <li>
+                        <span>12</span>
+                        <p>DEC</p>
+                    </li>
+                </ul>
+               <span id="ospan"></span>
+               <p id="op"></p>
+                </div>
+            
+    
+    
+</body>
+</html>
+<script>
+// var arr1 = [1,2,3,4,5,6,7,8,9,10,11,12];
+var arr2 = ['一月活动','二月活动','三月活动','四月活动','五月活动','六月活动','七月活动','八月活动','九月活动','十月活动','十一月活动','十二月活动'];
+var arr3 = ['去逛街','睡觉','打台球','打篮球','踢足球','吃饭','吃烧烤','吃烤鱼','吃小吃','读书','上网','玩游戏'];
+var bj=document.getElementById('bj');
+var lis=bj.getElementsByTagName('li');
+console.log(lis);
+var ospan=document.getElementById('ospan');
+var op=document.getElementById('op');
+for (var i =0; i<arr2.length; i++) {
+            lis[i].onmouseenter=function(){
+                for (var x=0;x<arr2.length; x++) {
+                    if (this==lis[x]) {
+                        lis[x].className="active";
+                        ospan.innerHTML=arr2[x];
+                        op.innerHTML=arr3[x];
+                    }else{
+                        lis[x].className="";
+                    }
+                }
+            }
+        }
+</script>
